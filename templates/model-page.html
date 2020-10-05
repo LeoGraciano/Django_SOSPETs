@@ -1,0 +1,30 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    
+    {% block style %}
+    <style>
+        .polaroid{
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .container{
+            padding: 10px;
+        }
+            
+    </style>    
+    {% endblock style %}
+        
+    {% include 'model-header.html' %}
+</head>
+<body>
+    {% block conteudo %} 
+    
+    {% endblock conteudo %}
+    
+    {% include 'model-footer.html' %}
+</body>
+
+</htl>

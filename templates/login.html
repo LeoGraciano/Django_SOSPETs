@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container mt-4">
+        <form action="submit" , method="POST">{% csrf_token %}
+            <h2> SOS Pets </h2>
+            <div class="from-gruop">
+                <label for="username">Usuário</label>
+                <input type="text" , class="form-control" id="username" name="username" placeholder="Usuário">
+            </div>
+            <br>
+            <div class="from-gruop">
+                <label for="password">Password</label>
+                <input type="password" , class="form-control" id="password" name="password" placeholder="Senha">
+            </div>
+            <br>
+
+            <div>
+                {% for message in messages %}
+                <div class="alert alert-danger">
+                    <strong>ERROR!</strong> {{ message }}> {% endfor %}
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

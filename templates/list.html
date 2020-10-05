@@ -1,0 +1,27 @@
+{% extends 'model-page.html' %}
+<style>
+
+</style>
+
+{% block conteudo %}
+<div class="container mb-4">
+    <div class="row">
+
+        {% for p in pet %}
+            <div class="col-md-4">
+                <a href="../detail/{{p.id}}">
+                    <div class="polaroid">
+                        <img src="{{ p.foto.url }}" style="width:100%;" >
+                        <div class="container">
+                            <p>{{p.cidade}}</p>                        
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock conteudo %}
