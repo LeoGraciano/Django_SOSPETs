@@ -1,0 +1,5 @@
+.pyc
+__pychache__
+.mypy_cache
+.vscode
+adocaovenv
